@@ -32,7 +32,8 @@
       
 </template>
 <script setup>
-
+const props = defineProps(['meauData'])
+console.log(props)
 </script>
 
 <style scoped>

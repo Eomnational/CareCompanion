@@ -10,11 +10,16 @@
         @close="handleClose"
         >
         <p class="logo-lg">DiDi陪诊</p>
-        <treeMeau/>
+        <treeMeau :meauData="meauData"/>
         </el-menu>
 </template>
 <script setup>
 import treeMeau from './treeMeau.vue';
+import {useRouter} from 'vue-router';
+import { reactive } from 'vue';
+
+const router=useRouter()
+const meauData =reactive(router.options.routes[0].children)
 const handleOpen=()=>{}
 const handleClose=()=>{}
 
